@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema  = mongoose.Schema;
 const Objectid = mongoose.Types.ObjectId;
-mongoose.connect("mongodb+srv://parvati:bqzW04YnHH4RgDbm@cluster0.h3y0kg4.mongodb.net/cousera-database");
+
 
 
 const userSchema = new Schema({

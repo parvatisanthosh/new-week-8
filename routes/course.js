@@ -7,9 +7,15 @@ courseRouter.post("/purchase",function(req,res){
         message : "this is the purchase page"
     })
 })
-courseRouter.post("/preview",function(req,res){
+courseRouter.post("/preview",async function(req,res){
+    const { title, description, price, imageurl, creatorId } = req.body;
+    const courses = await courseModel.create({
+        title, description, price, imageurl, creatorId
+        
+    })
     res.json({
-        message : "this is the preview page"
+        message : "course created",
+        courseId : courses._id
     })
 })
 
